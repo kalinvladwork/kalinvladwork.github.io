@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeBuddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+</head>
+<body>
+
+<div class="mainWrapper">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between ">
+                    <div class="brandName">
+                        <img src="images/logo.svg" class="brandName__logo" alt="logo">
+                        <div class="brandName__subtitle">for homeowners</div>
+                    </div>
+                    <a onclick="scrolling()">Link to form</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="heroBlock">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+                        <div class="u-h1 heroBlock__title">
+                            How <span class="u-access-bg-color">Over 410,000 Americans</span> Increased Their Property Value
+                            <span class="u-access-bg-color">In Under 6 Hours*</span> With This Simple Upgrade.
+                        </div>
+                        <p class="heroBlock__subtitle">
+                            Ideal for detached and semi-detached homes with sloped roofs.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="heroBlock_imgWrapper">
+                            <img srcset="images/hero-block-desktop.jpg 992w" sizes="(min-width: 992px) 580px, 100%" src="images/hero-block-mobile.jpg" alt="Gutter guards">
+                            <a href="https://google.com" target="_blank" class="heroBlock__badge">
+                                <span class="heroBlock__badge__text">As seen on</span>
+                                <img src="images/nbc.svg" alt="nbc logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <div class="card">
+                        <i class="i-badge card__img"></i>
+                        <p class="card__info">Lifetime warranty with 100% no-clog guarantee</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="card">
+                        <i class="i-house card__img"></i>
+                        <p class="card__info">Fits most homes</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="card">
+                        <i class="i-savings card__img"></i>
+                        <p class="card__info">Installs over existing gutters saving you thousands</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="card">
+                        <i class="i-rating card__img"></i>
+                        <ul class="rating" data-rating="4.5">
+                            <li class="rating__item"></li>
+                            <li class="rating__item"></li>
+                            <li class="rating__item"></li>
+                            <li class="rating__item"></li>
+                            <li class="rating__item"></li>
+                        </ul>
+                        <p class="card__info">Сustomer rating </p>
+                    </div>
+                </div>
+                <div class="col-12 d-lg-none">
+                    <div class="badge">
+                        <i class="i-savings-filling u-accent-color"></i>
+                        <span>You will be surprised how affordable gutter guards are!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sectionForm" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sectionForm">
+                        <div class="badge d-none d-lg-flex">
+                            <i class="i-savings-filling u-accent-color"></i>
+                            <span>You will be surprised how affordable gutter guards are!</span>
+                        </div>
+                        <div class="u-h2 sectionForm__title">
+                            See How Much Gutter Guards Cost In The XX, XXX Area
+                        </div>
+                        <div class="formBlock">
+                            <div class="formBlock__centring">
+                                <div class="formBlock__title">
+                                    What is your ZIP Code?
+                                </div>
+                                <div class="formControl">
+                                    <input class="formControl__input" type="text" placeholder="Enter ZIP Code">
+                                </div>
+                                <div class="formBlock__reminder">Free, no-obligation estimates.</div>
+                                <button class="button" type="button" onclick="openModal()">Get estimate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <div class="brandName">
+                    <img src="images/logo.svg" class="brandName__logo" alt="logo">
+                </div>
+                <nav class="navigation">
+                    <a href="" class="navigation__item">Terms of Use</a>
+                    <a href="" class="navigation__item">Privacy Policy</a>
+                    <a href="" class="navigation__item">Cookie Policy</a>
+                    <a href="" class="navigation__item">Do Not Sell My Personal Information</a>
+                    <a href="" class="navigation__item">Contact us</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div id="modalContainer">
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal__header">
+                <button type="button" class="modal__buttonClose" onclick="closeModal()">
+                    <i class="i-close"></i>
+                </button>
+
+                <div class="stepsProgress">
+                    <div class="stepsProgress__step"></div>
+                </div>
+
+            </div>
+            <div class="modal__body">
+                <div class="formSection formSection_active">
+                    <h2 class="u-h2 formSection__title">Are you homeowner or authrized to make property changes?</h2>
+                    <div class="radioWrapper">
+                        <div class="formControl_radio">
+                            <input type="radio" id="homeowner_true" name="homeowner-group">
+                            <label for="homeowner_true">
+                                <img src="images/circle-check.svg" alt="true icon">
+                                <span>Yes</span>
+                            </label>
+                        </div>
+                        <div class="formControl_radio">
+                            <input type="radio" id="homeowner_false" name="homeowner-group">
+                            <label for="homeowner_false">
+                                <img src="images/close-tiny.svg" alt="false icon">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" class="button" data-next onclick="nextStep()">Next</button>
+                </div>
+
+                <div class="formSection">
+                    <h2 class="u-h2 formSection__title">Who should I prepare this estimate for?</h2>
+                    <p class="formSection__text">Your choice: <b id="choice"></b></p>
+
+                    <form class="formSection__form" action="">
+                        <div class="formControl">
+                            <input class="formControl__input" type="text" placeholder="Full name">
+                        </div>
+
+                        <div class="formControl">
+                            <input class="formControl__input" type="email" placeholder="Email address">
+                        </div>
+
+                        <button type="submit" class="button" onclick="submitForm()">Next</button>
+                    </form>
+
+                    <p class="formSection__text"><i class="i-lock"></i>Safe, Secure and Confidential</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

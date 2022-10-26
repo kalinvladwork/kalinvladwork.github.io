@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.eot');
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+  url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Montserrat-Bold.woff') format('woff'),
+  url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.eot');
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+  url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Montserrat-Medium.woff') format('woff'),
+  url('../fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sirengrouptesticonfont';
+  src: url('../fonts/sirengrouptesticonfont.eot?4228403');
+  src: url('../fonts/sirengrouptesticonfont.eot?4228403#iefix') format('embedded-opentype'),
+  url('../fonts/sirengrouptesticonfont.woff2?4228403') format('woff2'),
+  url('../fonts/sirengrouptesticonfont.woff?4228403') format('woff'),
+  url('../fonts/sirengrouptesticonfont.ttf?4228403') format('truetype'),
+  url('../fonts/sirengrouptesticonfont.svg?4228403#sirengrouptesticonfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"]:before, [class*=" i-"]:before {
+  font-family: "sirengrouptesticonfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-star:before { content: '\e800'; } /* '' */
+.i-star-empty:before { content: '\e801'; } /* '' */
+.i-plus:before { content: '\e802'; } /* '' */
+.i-location:before { content: '\e803'; } /* '' */
+.i-lock:before { content: '\e804'; } /* '' */
+.i-close:before { content: '\e805'; } /* '' */
+.i-savings-filling:before { content: '\e806'; } /* '' */
+.i-rating:before { content: '\e807'; } /* '' */
+.i-savings:before { content: '\e808'; } /* '' */
+.i-house:before { content: '\e809'; } /* '' */
+.i-badge:before { content: '\e80a'; } /* '' */
+.i-star-half-alt:before { content: '\f123'; } /* '' */

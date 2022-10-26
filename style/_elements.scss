@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--step);
+  height: 100%;
+}
+
+body {
+  font-size: var(--font-size);
+  font-weight: 500;
+  line-height: 150%;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  height: 100%;
+  background-color: var(--base-color);
+  color: var(--base-color);
+
+  &.modal-active {
+    overflow: hidden;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  margin-bottom: var(--section-margin-bottom);
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition-all);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+

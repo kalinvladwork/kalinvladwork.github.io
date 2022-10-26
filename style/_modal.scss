@@ -1,0 +1,146 @@
+#modalContainer {
+  display: grid;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(0);
+  z-index: 1;
+
+  &.is-open {
+    transform:scaleY(.01) scaleX(0);
+    animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+    .modal {
+      transform:scale(0);
+      animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    &.out {
+      transform:scale(1);
+      animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+      .modal {
+        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      }
+    }
+  }
+}
+
+.modal-background {
+  display: grid;
+  padding: 1rem;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  vertical-align: middle;
+
+  .modal {
+    background: var(--base-color);
+    display: inline-block;
+    border-radius: 3px;
+  }
+}
+
+.modal__header {
+  height: var(--modal-header-height);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.stepsProgress {
+  width: 100%;
+  height: 4px;
+  background-color: var(--form-control-background);
+}
+
+.stepsProgress__step {
+  width: 50%;
+  height: 4px;
+  background-color: var(--access-color);
+  transition: var(--transition-all);
+
+  &.stepsProgress__step_full {
+    width: 100%;
+  }
+}
+
+.modal__buttonClose {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  position: absolute;
+  right: var(--modal-button-close-right);
+  top: calc(50% - (21px / 2) - 4px);
+
+  &:hover,
+  &:active {
+    i {
+      color: var(--accent-color);
+    }
+  }
+
+  i {
+    transition: var(--transition-all);
+    font-size: 21px;
+    color: #7A7A7A;
+  }
+}
+
+.formSection {
+  padding: var(--form-section-padding);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.formSection__title {
+  color: var(--neutral-color);
+  font-weight: 700;
+}
+
+.formSection__text {
+  font-size: var(--font-size-small);
+  color: var(--ligth-neutral-color);
+
+  i {
+    font-size: 11px;
+    margin-right: 5px;
+  }
+}
+
+.radioWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 12px 0 12px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    margin: 24px 0;
+  }
+}
+
+.formSection__form {
+  max-width: var(--form-section-form-max-width);
+  margin: 8px auto 16px;
+
+  .button {
+    margin-top: var(--form-section-form-button-margin-top);
+  }
+}
+
+.formSection {
+  display: none;
+}
+
+.formSection.formSection_active {
+  display: block;
+}
+
+
+
+
