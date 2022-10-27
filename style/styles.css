@@ -5950,6 +5950,7 @@ a:hover {
 @media (min-width: 992px) {
   .navigation {
     display: block;
+    align-self: unset;
   }
 }
 
@@ -6090,10 +6091,6 @@ a:hover {
   display: block;
 }
 
-.u-text-center {
-  text-align: center;
-}
-
 .u-accent-color {
   color: var(--accent-color);
 }
@@ -6113,12 +6110,6 @@ a:hover {
 .u-h2 {
   font-weight: 700;
   font-size: var(--h2-font-size);
-  line-height: 120%;
-}
-
-.u-h3 {
-  font-weight: 500;
-  font-size: var(--h3-font-size);
   line-height: 120%;
 }
 

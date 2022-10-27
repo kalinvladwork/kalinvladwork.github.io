@@ -4,8 +4,7 @@ let modal = document.querySelector('#modalContainer'),
     homeownerTrue = document.querySelector('#homeowner_true'),
     homeownerFalse = document.querySelector('#homeowner_false'),
     activeForm = document.querySelector('.formSection.formSection_active'),
-    stepsProgress = document.querySelector('.stepsProgress__step'),
-    nextButton = document.querySelector('.button[data-next]');
+    stepsProgress = document.querySelector('.stepsProgress__step');
 
 function scrolling() {
     event.preventDefault()
@@ -29,7 +28,6 @@ function closeModal() {
 
 function nextStep() {
     if (!homeownerTrue.checked && !homeownerFalse.checked) {
-        nextButton.getAttribute('disabled')
         return false
     }
 
