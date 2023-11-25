@@ -1,0 +1,90 @@
+//buttons
+.btn {
+  --border-color: theme('colors.other-yellow');
+  --background-color: theme('colors.other-light-yellow');
+  --shadow-color: #FC0;
+
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  font-weight: 700;
+  width: 100%;
+  height: var(--btn-height);
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid var(--border-color);
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 0px 0px var(--shadow-color);
+
+  &.is-brand-color {
+    --border-color: theme('colors.brand-primary');
+    --background-color: theme('colors.bg-primary');
+    --shadow-color: theme('colors.brand-primary');
+  }
+
+  &.has-img {
+    gap: 5px;
+  }
+}
+
+//form-controls
+.form-control {
+  position: relative;
+}
+
+.form-control_label {
+  position: absolute;
+  left: 17px;
+  top: 2.75rem;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  color: theme('colors.text-secondary');
+  transition: var(--transition);
+}
+
+.form-control_input {
+  --border-color: theme('colors.border-primary');
+
+  width: 100%;
+  height: var(--form-control-input-height);
+  display: flex;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+  gap: 10px;
+  align-self: stretch;
+  color: theme('colors.other-black');
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  background: theme('colors.bg-secondary');
+
+  &:focus-visible {
+    outline-offset: 1px;
+    outline: 2px solid theme('colors.other-yellow');
+  }
+
+  &.is-invalid {
+    --border-color: theme('colors.other-red');
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:focus~.form-control_label,
+  &:not(:placeholder-shown)~.form-control_label {
+    transform: var(--label-transform);
+    font-size: var(--label-font-size);
+    line-height: 130% ;
+  }
+}
+

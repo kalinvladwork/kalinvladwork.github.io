@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --base-value-step: 6px;
+  --font-size-base: 2.8rem;
+  --label-font-size: 2.4rem;
+  --btn-height: 45px;
+  --form-control-input-height: 60px;
+  --label-transform: translateY(-6px) translateX(0);
+  --transition: all ease-in 200ms;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --base-value-step: 8px;
+    --font-size-base: 2.5rem;
+    --label-font-size: 2rem;
+    --btn-height: 50px;
+    --form-control-input-height: 70px;
+    --label-transform: translateY(-14px) translateX(0);
+  }
+}
+
+html {
+  font-size: var(--base-value-step);
+}
+
+body {
+  color: theme("colors.text-primary");
+}
+
+p {
+  font-size: var(--font-size-base);
+}
+
+.btn {
+  --border-color: theme("colors.other-yellow");
+  --background-color: theme("colors.other-light-yellow");
+  --shadow-color: #FC0;
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  font-weight: 700;
+  width: 100%;
+  height: var(--btn-height);
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid var(--border-color);
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 0px 0px var(--shadow-color);
+}
+.btn.is-brand-color {
+  --border-color: theme("colors.brand-primary");
+  --background-color: theme("colors.bg-primary");
+  --shadow-color: theme("colors.brand-primary");
+}
+.btn.has-img {
+  gap: 5px;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control_label {
+  position: absolute;
+  left: 17px;
+  top: 2.75rem;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  color: theme("colors.text-secondary");
+  transition: var(--transition);
+}
+
+.form-control_input {
+  --border-color: theme("colors.border-primary");
+  width: 100%;
+  height: var(--form-control-input-height);
+  display: flex;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+  gap: 10px;
+  align-self: stretch;
+  color: theme("colors.other-black");
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  background: theme("colors.bg-secondary");
+}
+.form-control_input:focus-visible {
+  outline-offset: 1px;
+  outline: 2px solid theme("colors.other-yellow");
+}
+.form-control_input.is-invalid {
+  --border-color: theme("colors.other-red");
+}
+.form-control_input::placeholder {
+  color: transparent;
+}
+.form-control_input:focus ~ .form-control_label, .form-control_input:not(:placeholder-shown) ~ .form-control_label {
+  transform: var(--label-transform);
+  font-size: var(--label-font-size);
+  line-height: 130%;
+}
+
+/*# sourceMappingURL=input.css.map */

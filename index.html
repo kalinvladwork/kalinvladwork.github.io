@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test front-end</title>
+    <link href="/dist/css/style.css" rel="stylesheet">
+</head>
+<body class="tw-bg-bg-primary">
+    <div class="tw-mx-auto tw-pt-10 tw-max-w-[550px] tw-mb-[2.5rem]">
+        <header class="tw-mb-[50px]">
+            <img class="tw-mx-auto" width="150" height="20" src="dist/img/logo.svg" alt="logo" >
+        </header>
+        <main class="md:tw-px-0 tw-px-[20px]">
+            <img class="tw-mx-auto tw-mb-[2.5rem]" width="100" height="100" src="dist/img/ms-starky.svg" alt="welcome icon">
+            <h1 class="tw-text-center tw-font-extrabold tw-mb-[2.5rem] tw-leading-none tw-text-9xl">
+                Увійти
+            </h1>
+            <a href="/" class="tw-mb-[2.5rem] btn is-brand-color has-img">
+                <img class="md:tw-w-[30px] tw-w-[25px] tw-h-auto" width="30" height="30" src="dist/img/google-icon.svg" alt="google icon">
+                <span>Google</span>
+            </a>
+            <p class="tw-mb-[2.5rem] tw-text-center">або</p>
+            <form novalidate action="" class="form" onsubmit="return validateForm()">
+                <div class="tw-mb-[2.5rem] form-control">
+                    <input data-validation="email" type="email" id="email" class="form-control_input" placeholder="email">
+                    <label for="email" class="form-control_label">Ел. пошта</label>
+                    <div data-error="email" class="md:tw-text-[2rem] tw-text-4xl tw-mt-[5px] tw-font-medium tw-text-other-red"></div>
+                </div>
+                <div class="tw-mb-10 form-control">
+                    <input data-validation="password" type="password" id="password" class="form-control_input" placeholder="password">
+                    <label for="password" class="form-control_label">Пароль</label>
+                    <div data-error="password" class="md:tw-text-[2rem] tw-text-4xl tw-mt-[5px] tw-font-medium tw-text-other-red"></div>
+                    <a class="tw-block tw-underline tw-text-text-secondary md:tw-text-[2rem] tw-mt-[5px] tw-text-4xl" href="/">Не пам'ятаєш пароль?</a>
+                </div>
+                <button type="submit" class="tw-mb-[2.5rem] btn">Увійти</button>
+            </form>
+            <p class="tw-text-center">Ще не з нами? <a href="/" class="tw-font-bold tw-underline">Зареєструватися</a></p>
+        </main>
+    </div>
+
+    <script src="dist/script/main.js"></script>
+</body>
+</html>
